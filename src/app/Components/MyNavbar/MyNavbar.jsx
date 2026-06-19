@@ -16,33 +16,33 @@ const MyNavbar = () => {
   const user = data?.user;
   // ✅ logout
   const handleLogout = async () => {
-  try {
-    const session = await authClient.getSession();
-    const user = session?.data?.user;
+    try {
+      const session = await authClient.getSession();
+      const user = session?.data?.user;
 
-    const userId = user?.id || user?._id;
+      const userId = user?.id || user?._id;
 
-    // 🔥 backend call
-    if (userId) {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/logout`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userId }),
-      });
+      // 🔥 backend call
+      if (userId) {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/logout`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userId }),
+        });
 
-      const data = await res.json();
-      console.log("logout api response:", data);
+        const data = await res.json();
+        console.log("logout api response:", data);
+      }
+
+      await authClient.signOut();
+
+      window.location.href = "/login";
+    } catch (err) {
+      console.error("Logout error:", err);
     }
-
-    await authClient.signOut();
-
-    window.location.href = "/auth/login";
-  } catch (err) {
-    console.error("Logout error:", err);
-  }
-};
+  };
   return (
     <Navbar className="bg-linear-to-br from-purple-50 via-white to-purple-100 shadow-sm border-b border-purple-100 p-2 flex justify-between">
       {/* Brand */}
@@ -91,12 +91,14 @@ const MyNavbar = () => {
         </NavbarItem>
 
         <NavbarItem>
-          <Link
-            href="/admin"
-            className="text-gray-600 font-medium hover:text-purple-700 transition"
-          >
-            dashboard
-          </Link>
+          {(user?.role === "admin" || user?.role === "user") && (
+            <Link
+              className="text-gray-600 font-medium hover:text-purple-700 transition"
+              href="/admin"
+            >
+              dashboard
+            </Link>
+          )}
         </NavbarItem>
       </NavbarContent>
 
@@ -119,7 +121,7 @@ const MyNavbar = () => {
             </div>
           ) : (
             <Link
-              href="/auth/login"
+              href="/login"
               className="bg-linear-to-r from-purple-600 to-pink-500 text-white px-5 py-2 rounded-full shadow-md"
             >
               Login

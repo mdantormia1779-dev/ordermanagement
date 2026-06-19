@@ -3,13 +3,16 @@ import { NextResponse } from "next/server";
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
+  // only protect admin route
   if (pathname.startsWith("/admin")) {
-    const token = request.cookies.get("better-auth.session_token")?.value;
+    const token = request.cookies.getAll().find(c => 
+      c.name.includes("session")
+    );
 
     console.log("TOKEN:", token);
 
     if (!token) {
-      return NextResponse.redirect(new URL("/auth/login", request.url));
+      return NextResponse.redirect(new URL("/login", request.url));
     }
   }
 

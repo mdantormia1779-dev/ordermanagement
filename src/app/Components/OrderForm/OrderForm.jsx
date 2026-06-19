@@ -166,7 +166,7 @@ export default function OrderForm() {
             {/* BUTTON */}
             <Button
               type="submit"
-              className="w-full bg-linear-to-r from-purple-600 to-pink-500 text-white font-semibold text-lg rounded-xl shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="w-full py-2 bg-linear-to-r from-purple-600 to-pink-500 text-white font-semibold text-lg rounded-xl shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               Submit Order
             </Button>

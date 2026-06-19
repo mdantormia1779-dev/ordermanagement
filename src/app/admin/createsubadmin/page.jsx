@@ -226,7 +226,7 @@ export default function RegisterPage() {
         {/* FOOTER */}
         <p className="text-center text-sm text-gray-500 mt-5">
           Already have an account?{" "}
-          <Link href="/auth/login" className="text-purple-600 font-medium">
+          <Link href="/login" className="text-purple-600 font-medium">
             Login
           </Link>
         </p>

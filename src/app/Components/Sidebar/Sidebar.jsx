@@ -227,7 +227,7 @@ export default function Sidebar() {
           <button
             onClick={async () => {
               await authClient.signOut();
-              window.location.href = "/auth/login";
+              window.location.href = "/login";
             }}
             className="text-red-400 hover:text-red-300 w-full text-left"
           >
