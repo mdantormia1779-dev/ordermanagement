@@ -78,15 +78,15 @@ export default function Orders() {
 
   // ================= UI =================
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="p-6 max-w-6xl text-black mx-auto">
       <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold">Orders</h1>
+        <h1 className="text-2xl text-black font-bold">Orders</h1>
         <span>Total: {orders.length}</span>
       </div>
 
-      <div className="bg-white rounded-xl shadow overflow-hidden">
+      <div className="rounded-xl shadow overflow-hidden">
         <table className="w-full text-left">
-          <thead className="bg-gray-50">
+          <thead className="bg-gray-50 text-black">
             <tr>
               <th className="p-4">Order ID</th>
               <th>Customer</th>
@@ -99,7 +99,7 @@ export default function Orders() {
 
           <tbody>
             {orders.map((o) => (
-              <tr key={o._id} className="border-t">
+              <tr key={o._id} className="border-t text-black">
                 <td className="p-4">{o._id.slice(-6)}</td>
 
                 <td>{o.name}</td>
@@ -130,14 +130,14 @@ export default function Orders() {
 
       {/* MODAL */}
       {open && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/40 text-black flex items-center justify-center">
           <div className="bg-white p-6 rounded-xl w-96">
-            <h2 className="font-bold mb-4">Update Status</h2>
+            <h2 className="font-bold mb-4 text-black">Update Status</h2>
 
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value)}
-              className="w-full border p-2 mb-4"
+              className="w-full border p-2 mb-4 text-black"
             >
               <option>Pending</option>
               <option>Processing</option>
@@ -145,7 +145,7 @@ export default function Orders() {
               <option>Cancelled</option>
             </select>
 
-            <div className="flex justify-end gap-2">
+            <div className="flex justify-end gap-2 text-black">
               <button onClick={() => setOpen(false)}>Cancel</button>
 
               <button

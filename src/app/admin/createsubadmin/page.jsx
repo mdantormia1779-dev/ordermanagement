@@ -112,7 +112,7 @@ export default function RegisterPage() {
         </div>
 
         {/* FORM */}
-        <Form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <Form className="flex text-black flex-col gap-4" onSubmit={handleSubmit}>
           {/* NAME */}
           <TextField isRequired name="name">
             <Label>Full Name</Label>

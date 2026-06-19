@@ -29,7 +29,7 @@ const Reminder = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-sm w-full border border-gray-100">
+    <div className="bg-white text-black p-6 rounded-2xl shadow-sm w-full border border-gray-100">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-bold text-gray-800">Reminders</h2>
 

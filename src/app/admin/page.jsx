@@ -35,11 +35,11 @@ const AdminDashboard = () => {
   const cancelled = orders.filter((o) => o.status === "Cancelled").length;
 
   return (
-    <div className="flex min-h-screen bg-gray-100 md:p-8">
+    <div className="flex min-h-screen bg-gray-100 text-black md:p-8">
       <main className="flex-1 p-4 md:p-8 overflow-y-auto">
         {/* Header */}
         <header className="mb-6">
-          <h2 className="text-xl md:text-2xl font-semibold">
+          <h2 className="text-xl text-black md:text-2xl font-semibold">
             Analytics Dashboard
           </h2>
         </header>
@@ -76,16 +76,16 @@ const AdminDashboard = () => {
         </div>
 
         {/* Charts */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 text-black md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="md:col-span-2 bg-white p-6 rounded-xl shadow-sm">
-            <h3 className="font-semibold mb-4">Analytics Overview</h3>
+            <h3 className="font-semibold text-black mb-4">Analytics Overview</h3>
             <div className="w-full h-50">
               <MyChart />
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-sm">
-            <h3 className="font-semibold mb-4">Orders by Status</h3>
+          <div className="bg-white text-black p-6 rounded-xl shadow-sm">
+            <h3 className="font-semibold text-black mb-4">Orders by Status</h3>
             <div className="w-full h-50">
               <OrderPieChart />
             </div>

@@ -77,7 +77,7 @@ const AssignOrders = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg">
+    <div className="max-w-5xl mx-auto mt-10 p-6 bg-white text-black rounded-2xl shadow-lg">
       
       {/* HEADER */}
       <div className="flex justify-between items-center mb-6">
@@ -158,7 +158,7 @@ const AssignOrders = () => {
               );
               setSelectedAdmin(admin);
             }}
-            className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-400 outline-none"
+            className="w-full border text-black rounded-lg p-3 focus:ring-2 focus:ring-indigo-400 outline-none"
           >
             {admins.map((admin) => (
               <option key={admin._id} value={admin._id}>

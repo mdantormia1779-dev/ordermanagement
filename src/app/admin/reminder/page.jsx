@@ -103,14 +103,14 @@ const Page = () => {
         <input
           type="text"
           placeholder="Order ID (e.g. ORD-001)"
-          className="w-full p-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-200 mb-3"
+          className="w-full p-3 rounded-lg border text-gray-300 border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-200 mb-3"
           value={orderId}
           onChange={(e) => setOrderId(e.target.value)}
         />
 
         <textarea
           placeholder="Reminder message"
-          className="w-full p-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-200 mb-3"
+          className="w-full p-3 text-gray-300 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-200 mb-3"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />

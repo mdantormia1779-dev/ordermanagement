@@ -124,7 +124,7 @@ const LoginPage = () => {
         </div>
 
         {/* FORM */}
-        <Form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <Form className="flex text-black flex-col gap-4" onSubmit={handleSubmit}>
 
           {/* EMAIL */}
           <TextField isRequired name="email">

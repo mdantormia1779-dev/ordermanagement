@@ -74,7 +74,7 @@ export default function OrderForm() {
             </p>
           </div>
 
-          <Form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+          <Form className="flex text-black flex-col gap-5" onSubmit={handleSubmit}>
             {/* GRID */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* NAME */}

@@ -39,11 +39,11 @@ const RecentOrder = () => {
   }, []);
 
   return (
-    <div className="bg-white p-4 md:p-6 rounded-xl h-full shadow-sm border border-gray-100 w-full">
+    <div className="bg-white text-black p-4 md:p-6 rounded-xl h-full shadow-sm border border-gray-100 w-full">
 
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg md:text-xl font-semibold">
+        <h2 className="text-lg text-black md:text-xl font-semibold">
           Recent Orders
         </h2>
         <Link href={"/admin/order"} className="text-indigo-600 text-sm hover:underline">
@@ -77,7 +77,7 @@ const RecentOrder = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="text-black">
             {orders.map((order) => (
               <tr
                 key={order._id}

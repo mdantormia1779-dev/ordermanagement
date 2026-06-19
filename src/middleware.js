@@ -9,7 +9,6 @@ export function middleware(request) {
       c.name.includes("session")
     );
 
-    console.log("TOKEN:", token);
 
     if (!token) {
       return NextResponse.redirect(new URL("/login", request.url));
