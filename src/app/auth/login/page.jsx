@@ -57,7 +57,7 @@ const LoginPage = () => {
       const { error } = await authClient.signIn.email({
         email: form.email.trim().toLowerCase(),
         password: form.password,
-        // callbackURL: "/admin"
+        callbackURL: "/admin"
       });
 
       if (error) {
